@@ -8,7 +8,7 @@ namespace TestLib
     /// <remarks>
     /// We're going to talk about things now.
     /// <list type="table">
-    /// <listheader><u><b>Things</b></u></listheader>
+    /// <listheader>Things for the header</listheader>
     /// <item>
     /// <term><see cref="BoolReturningMethod(bool)"/></term>
     /// <description><inheritdoc cref="BoolReturningMethod(bool)" path="/summary"/></description>
