@@ -5,3 +5,5 @@
  It also doesn't render <listheader> items.
 
  To build, simply run build.cmd.
+
+ ![Visual Studio Tooltip](tooltip.png)
