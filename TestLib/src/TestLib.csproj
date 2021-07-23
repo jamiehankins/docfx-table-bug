@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <!-- Clean up DocFX output -->
+  <Target Name="CleanDocFX" AfterTargets="DocClean" Condition="$(Configuration.Contains('All'))">
+    <Message Text="Cleaning up DocFX generated documentation." Importance="high" />
+    <RemoveDir Directories="$(ProjectDir)..\docs\_site\" />
+    <ItemGroup Label="DocFX Artifacts to Clean">
+      <FilesToDelete Include="$(ProjectDir)..\docs\api\*.yml" />
+      <FilesToDelete Include="$(ProjectDir)..\docs\api\.manifest" />
+      <FilesToDelete Include="$(ProjectDir)..\docs\log.txt" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+
+  <PropertyGroup Label="DocFX settings">
+    <LogFile>..\docs\log.txt</LogFile>
+    <LogLevel>Warning</LogLevel>
+    <DocParameters>--warningsAsErrors --disableGitFeatures</DocParameters>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.58.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="memberpage" Version="2.58.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
