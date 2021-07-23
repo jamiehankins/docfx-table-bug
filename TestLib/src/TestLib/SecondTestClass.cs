@@ -11,6 +11,11 @@ namespace TestLib.TestLib
     /// </summary>
     /// <remarks>
     /// There's really no reason to not believe that this class can test things.
+    /// <list type="table">
+    /// <listheader><i>This is the header.</i></listheader>
+    /// <item><term>A Term</term><description>A Description</description></item>
+    /// <item><term>Bee Term</term><description>Bee Description</description></item>
+    /// </list>
     /// </remarks>
     public class SecondTestClass
     {

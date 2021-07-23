@@ -5,25 +5,25 @@ namespace TestLib
     /// <summary>
     /// This is a test class to have something for DocFX to document.
     /// </summary>
+    /// <remarks>
+    /// We're going to talk about things now.
+    /// <list type="table">
+    /// <listheader><u><b>Things</b></u></listheader>
+    /// <item>
+    /// <term><see cref="BoolReturningMethod(bool)"/></term>
+    /// <description><inheritdoc cref="BoolReturningMethod(bool)" path="/summary"/></description>
+    /// </item>
+    /// <item>
+    /// <term><see cref="DoDad"/></term>
+    /// <description><inheritdoc cref="DoDad" path="/summary"/></description>
+    /// </item>
+    /// </list>
+    /// </remarks>
     public class TestClass
     {
         /// <summary>
         /// This is a constructor to document.
         /// </summary>
-        /// <remarks>
-        /// We're going to talk about things now.
-        /// <list type="table">
-        /// <listheader><u><b>Things</b></u></listheader>
-        /// <item>
-        /// <term><see cref="BoolReturningMethod(bool)"/></term>
-        /// <description><inheritdoc cref="BoolReturningMethod(bool)" path="/summary"/></description>
-        /// </item>
-        /// <item>
-        /// <term><see cref="DoDad"/></term>
-        /// <description><inheritdoc cref="DoDad" path="/summary"/></description>
-        /// </item>
-        /// </list>
-        /// </remarks>
         public TestClass() { }
 
         /// <summary>
