@@ -19,10 +19,7 @@ namespace TestLib.TestLib
         /// </summary>
         public SecondTestClass() { }
 
-        /// <summary>
-        /// Answers the question. Don't ask if you don't want to know.
-        /// </summary>
-        /// <returns>A positive answer.</returns>
+        /// <inheritdoc cref="TestClass.BoolReturningMethod(bool)"/>
         public bool AnswerTheQuestion() => true;
 
         /// <summary>
@@ -30,5 +27,11 @@ namespace TestLib.TestLib
         /// </summary>
         /// <returns>The best number.</returns>
         public int BestNumber() => 38;
+
+        /// <summary>
+        /// The remarks should be inherited,
+        /// </summary>
+        /// <inheritdoc cref="TestClass.BoolReturningMethod(bool)" path="/remarks"/>
+        public void JustTheRemarks() { }
     }
 }
